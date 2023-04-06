@@ -1,0 +1,104 @@
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(#121212, #212b46) ;
+    /*css centralizando os itens e colocando cor de fundo*/
+}
+
+.title{
+    font-size: 75px;
+    color: white;
+    animation: flipTitle 3s; /*adicionando a animação em 2 segundos*/
+}
+
+@keyframes flipTitle { /*animação criada de flip do titulo*/
+   from{ /*começar a animação*/
+    transform: rotateX(90deg);
+   }
+   to{ /*terminar a animação*/
+    transform: rotateX(0deg)
+   } 
+}
+
+.containerInput{
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    margin: 34px 0;
+    display: flex;
+    border-radius: 8px;
+    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.containerInput input{
+    background-color: transparent;
+    border: 0px;
+    font-size: 20px;
+    color: white;
+    outline: none;
+    margin-right: 8px ;
+}
+
+.containerInput input::placeholder{
+    color: #f1f1f196
+}
+
+.buttonSearch{
+    background-color: transparent;
+    border: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s ;/*suavizando a animação criado a baixo da lupa*/
+}
+
+.buttonSearch:hover{ /*animação de aumentar a lupa de pesquisa*/
+    transform: scale(1.2);
+}
+
+.main{
+   display: flex; 
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: #fff;
+   width: 500px;
+   border-radius: 8px;
+}
+
+.main h2{
+   margin: 16px 0; 
+   font-size: 28px;
+}
+
+.main span{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+@media (max-width: 620px){
+    .title{
+        font-size:55px; ;
+    }
+
+    .main{
+        width: 80%;
+        min-height: 200px;
+    }
+
+    .containerInput input{
+        width: 180px;
+    }
+
+    .main h2{
+        font-size: 25px;
+        
+    }
+
+    .main span{
+        font-size: 16px;
+    }
+}
